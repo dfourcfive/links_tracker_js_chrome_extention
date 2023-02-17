@@ -1,0 +1,17 @@
+{
+  "name": "Link Tracker",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Track link clicks and observe the time duration",
+  "permissions": ["tabs", "activeTab"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
